@@ -79,7 +79,7 @@ F19::Run https://facebook.com
 
 ; Pasting
 #v::Send ^v
-
+ 
 ; Cutting
 #x::^x
 
