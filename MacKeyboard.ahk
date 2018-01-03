@@ -47,11 +47,9 @@ F17::Run http://tumblr.com
 F18::Run http://www.reddit.com
 F19::Run https://facebook.com
 
-; Swap < and 
+; Some keyboards have the keys "\" and "<" swapped (at least with the italian layout). Swap them.
 \::<
-+\::+<
 <::\
-+<::+\
 
 ; --------------------------------------------------------------
 ; OS X system shortcuts
