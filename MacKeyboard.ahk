@@ -67,6 +67,8 @@ F19::Run https://facebook.com
 !+Left::SendInput ^+{Left}
 !+Right::SendInput ^+{Right}
 
+;Cmd-Backspace to Del
+#Backspace::Delete
 
 ; Make Ctrl + S work with cmd (windows) key
 #s::^s
@@ -79,7 +81,7 @@ F19::Run https://facebook.com
 
 ; Pasting
 #v::Send ^v
- 
+
 ; Cutting
 #x::^x
 
