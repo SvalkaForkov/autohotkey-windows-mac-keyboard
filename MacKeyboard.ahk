@@ -26,8 +26,8 @@ RAlt & F7::SendInput {Media_Prev}
 RAlt & F8::SendInput {Media_Play_Pause}
 RAlt & F9::SendInput {Media_Next}
 F10::SendInput {Volume_Mute}
-F11::SendInput {Volume_Down 2}
-F12::SendInput {Volume_Up 2}
+F11::SendInput {Volume_Down}
+F12::SendInput {Volume_Up}
 
 ; swap left command/windows key with left alt
 ;LWin::LAlt
