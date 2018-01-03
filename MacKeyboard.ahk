@@ -26,8 +26,8 @@ RAlt & F7::SendInput {Media_Prev}
 RAlt & F8::SendInput {Media_Play_Pause}
 RAlt & F9::SendInput {Media_Next}
 F10::SendInput {Volume_Mute}
-F11::SendInput {Volume_Down}
-F12::SendInput {Volume_Up}
+F11::SendInput {Volume_Down 2}
+F12::SendInput {Volume_Up 2}
 
 ; swap left command/windows key with left alt
 ;LWin::LAlt
@@ -47,9 +47,26 @@ F17::Run http://tumblr.com
 F18::Run http://www.reddit.com
 F19::Run https://facebook.com
 
+; Swap < and 
+\::<
++\::+<
+<::\
++<::+\
+
 ; --------------------------------------------------------------
 ; OS X system shortcuts
 ; --------------------------------------------------------------
+
+; cmd + arrows - start & end of lines, with shift for selecting text
+#Left::SendInput {Home}
+#Right::SendInput {End}
+#+Left::sendInput +{Home}
+#+Right::SendInput +{End}
+!Left::SendInput ^{Left}
+!Right::SendInput ^{Right}
+!+Left::SendInput ^+{Left}
+!+Right::SendInput ^+{Right}
+
 
 ; Make Ctrl + S work with cmd (windows) key
 #s::^s
@@ -58,10 +75,10 @@ F19::Run https://facebook.com
 #a::^a
 
 ; Copying
-#c::^c
+#c::Send ^c
 
 ; Pasting
-#v::^v
+#v::Send ^v
 
 ; Cutting
 #x::^x
@@ -145,7 +162,6 @@ Lwin & Tab::AltTab
 
 ; Map Alt + 3 to #
 !3::SendInput {#}
-
 
 
 ; --------------------------------------------------------------
