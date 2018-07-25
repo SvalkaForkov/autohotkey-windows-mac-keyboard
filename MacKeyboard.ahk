@@ -17,6 +17,8 @@
 SetTitleMatchMode 2
 SendMode Input
 
+; Disable stuff
+#space:: SendInput ^{space}
 
 ; --------------------------------------------------------------
 ; media/function keys all mapped to the right option key
@@ -25,9 +27,9 @@ SendMode Input
 RAlt & F7::SendInput {Media_Prev}
 RAlt & F8::SendInput {Media_Play_Pause}
 RAlt & F9::SendInput {Media_Next}
-F10::SendInput {Volume_Mute}
-F11::SendInput {Volume_Down}
-F12::SendInput {Volume_Up}
+; F10::SendInput {Volume_Mute}
+; F11::SendInput {Volume_Down 2}
+; F12::SendInput {Volume_Up 2}
 
 ; swap left command/windows key with left alt
 ;LWin::LAlt
@@ -47,59 +49,46 @@ F17::Run http://tumblr.com
 F18::Run http://www.reddit.com
 F19::Run https://facebook.com
 
-; Some keyboards have the keys "\" and "<" swapped (at least with the italian layout). Swap them.
+; Swap < and 
 \::<
 <::\
+
+#LButton::^LButton
+
 
 ; --------------------------------------------------------------
 ; OS X system shortcuts
 ; --------------------------------------------------------------
 
+; Cursor Movement
+;
 ; cmd + arrows - start & end of lines, with shift for selecting text
 #Left::SendInput {Home}
 #Right::SendInput {End}
-#+Left::sendInput +{Home}
-#+Right::SendInput +{End}
+#+Left::Send {LShift down}{Home}{LShift Up}
+#+Right::Send {LShift down}{End}{LShift Up}
 !Left::SendInput ^{Left}
 !Right::SendInput ^{Right}
 !+Left::SendInput ^+{Left}
 !+Right::SendInput ^+{Right}
 
+;Command-backspace deletes whole line
+#BS::Send {LShift down}{Home}{LShift Up}{Del}
+
 ;Cmd-Backspace to Del
 #Backspace::Delete
 
-; Make Ctrl + S work with cmd (windows) key
-#s::^s
-
-; Selecting
-#a::^a
-
-; Copying
-#c::Send ^c
-
-; Pasting
-#v::Send ^v
-
-; Cutting
-#x::^x
-
-; Opening
-#o::^o
-
-; Finding
-#f::Send ^f
-
-; Undo
-#z::^z
-
-; Redo
-#y::^y
-
-; New tab
-#t::^t
-
-; close tab
-#w::^w
+#s::SendInput ^{s}
+#a::SendInput ^{a}
+#c::SendInput ^{c}
+#v::SendInput ^{v}
+#x::SendInput ^{x}
+#o::SendInput ^{o}
+#f::SendInput ^{f}
+#z::SendInput ^{z}
+#y::SendInput ^{y}
+#t::SendInput ^{t}
+#w::SendInput ^{w}
 
 ; Close windows (cmd + q to Alt + F4)
 #q::Send !{F4}
@@ -109,7 +98,6 @@ Lwin & Tab::AltTab
 
 ; minimize windows
 #m::WinMinimize,a
-
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
