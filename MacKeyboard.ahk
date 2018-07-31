@@ -65,15 +65,15 @@ F19::Run https://facebook.com
 ; cmd + arrows - start & end of lines, with shift for selecting text
 #Left::SendInput {Home}
 #Right::SendInput {End}
-#+Left::Send {LShift down}{Home}{LShift Up}
-#+Right::Send {LShift down}{End}{LShift Up}
+#+Left::Send {Shift down}{Home}{Shift Up}
+#+Right::Send {Shift down}{End}{Shift Up}
 !Left::SendInput ^{Left}
 !Right::SendInput ^{Right}
 !+Left::SendInput ^+{Left}
 !+Right::SendInput ^+{Right}
 
 ;Command-backspace deletes whole line
-#BS::Send {LShift down}{Home}{LShift Up}{Del}
+#BS::Send {Shift down}{Home}{Shift Up}{Del}
 
 ;Cmd-Backspace to Del
 #Backspace::Delete
