@@ -73,7 +73,7 @@ F19::Run https://facebook.com
 !+Right::SendInput ^+{Right}
 
 ;Command-backspace deletes whole line
-#BS::Send {Shift down}{Home}{Shift Up}{Del}
+;#BS::Send {Shift down}{Home}{Shift Up}{Del}
 
 ;Cmd-Backspace to Del
 #Backspace::Delete
