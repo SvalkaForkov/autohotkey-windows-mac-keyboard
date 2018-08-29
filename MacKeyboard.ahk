@@ -76,7 +76,20 @@ F19::Run https://facebook.com
 ;#BS::Send {Shift down}{Home}{Shift Up}{Del}
 
 ;Cmd-Backspace to Del
-#Backspace::Delete
+;#Backspace::Delete
+
+#BS::
+    WinGet, Active_ID, ID, A
+    WinGet, Active_Process, ProcessName, ahk_id %Active_ID%
+    if ( Active_Process = "explorer.exe" ) {
+
+        SendInput {Delete}
+
+    } else {
+
+        Send {Shift down}{Home}{Shift Up}{Delete}
+
+    }
 
 #s::SendInput ^{s}
 #a::SendInput ^{a}
@@ -179,4 +192,3 @@ Lwin & Tab::AltTab
 #!u::Send ^u
 
 #IfWinActive
-
